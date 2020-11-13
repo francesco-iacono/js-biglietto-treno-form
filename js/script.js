@@ -59,8 +59,8 @@ bottoneGenera.addEventListener( 'click',
   var bottoneAnnulla = document.getElementById('annulla');
   bottoneAnnulla.addEventListener( 'click',
       function() {
-        // var bigliettoTreno = document.getElementById('biglietto');
-        // bigliettoTreno.className = 'hidden';
+        var bigliettoTreno = document.getElementById('biglietto');
+        bigliettoTreno.className = 'hidden';
 
         // cancellare dati info
         document.getElementById('nome_cognome').value = '';
