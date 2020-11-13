@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.wrapper {
+  width: 70%;
+  margin: auto;
+}
+.wrapper h1 {
+  text-align: center;
+}
+.container_viaggio {
+  background-color: lightblue;
+}
+.info_viaggio {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 80px;
+}
+.btn_two {
+  text-align: center;
+}
+.biglietto {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  margin-top: 20px;
+  background-color: lightblue;
+}
+.table_biglietto {
+  background-color: #ffff;
+}
+.table_biglietto th, .table_biglietto td {
+  padding: 0 20px;
+}

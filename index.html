@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Biglitto treno</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Calcola il prezzo del biglietto</h1>
+      <div class="container_viaggio">
+        <div class="info_viaggio">
+          <div class="dettagli_viaggio">
+            <h3>Nome e Cognome</h3>
+            <input id="nome_cognome" type="text" name="nome" placeholder="Inserisci Nome e Cognome">
+          </div>
+          <div class="dettagli_viaggio">
+            <h3>Km da percorrere</h3>
+            <input id="km" type="number" name="km" placeholder="Km da percorrere">
+          </div>
+          <div class="dettagli_viaggio">
+            <h3>Fascia d'età</h3>
+            <select name="eta" id="fascia_eta">
+              <option value="Minorenne">Minorenne</option>
+              <option value="Maggiorenne">Maggiorenne</option>
+              <option value="Over 65">Over 65</option>
+            </select>
+          </div>
+        </div>
+        <div class="btn_two">
+          <button id="conferma" type="button" name="button">Genera</button>
+          <button id="annulla" type="button" name="button">Annulla</button>
+        </div>
+      </div>
+
+      <div class="biglietto">
+        <table class="table_biglietto">
+          <tr>
+            <th>Nome del passeggero</th>
+            <th>Offerta</th>
+            <th>Carrozza</th>
+            <th>Codice CP</th>
+            <th>Costo del biglietto</th>
+          </tr>
+          <tr>
+            <td id="nome_passeggero"></td>
+            <td id="offerta_passeggero"></td>
+            <td id=" carrozza_passeggero"></td>
+            <td id="codice_passeggero"></td>
+            <td id="costo_biglietto"></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <script src="js/script.js" charset="utf-8"></script>
+  </body>
+</html>
