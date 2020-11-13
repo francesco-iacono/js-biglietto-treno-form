@@ -53,7 +53,11 @@ bottoneGenera.addEventListener( 'click',
           console.log(prezzoStandard);
       }
 
-      // inserire dati nel html
+      // dati del biglietto
       document.getElementById('nome_passeggero').innerHTML = nomeDelPasseggero;
+      var carrozzaPassegero = Math.floor( Math.random() * 10) + 1;
+      document.getElementById('carrozza_passeggero').innerHTML = carrozzaPassegero;
+      var codiceCP = Math.floor( Math.random() * 10000) + 90000;
+      document.getElementById('codice_passeggero').innerHTML = codiceCP;
     }
   );
