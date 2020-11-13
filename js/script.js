@@ -59,7 +59,18 @@ bottoneGenera.addEventListener( 'click',
   var bottoneAnnulla = document.getElementById('annulla');
   bottoneAnnulla.addEventListener( 'click',
       function() {
-        var bigliettoTreno = document.getElementById('biglietto');
-        bigliettoTreno.className = 'hidden';
+        // var bigliettoTreno = document.getElementById('biglietto');
+        // bigliettoTreno.className = 'hidden';
+
+        // cancellare dati info
+        document.getElementById('nome_cognome').value = '';
+        document.getElementById('km').value = '';
+        document.getElementById('fascia_eta').value = '';
+        // cancellare dati biglietto
+        document.getElementById('nome_passeggero').innerHTML = '';
+        document.getElementById('offerta_passeggero').innerHTML = '';
+        document.getElementById('carrozza_passeggero').innerHTML = '';
+        document.getElementById('codice_passeggero').innerHTML = '';
+        document.getElementById('costo_biglietto').innerHTML = '';
       }
   );
