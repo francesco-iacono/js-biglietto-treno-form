@@ -14,11 +14,36 @@ bottoneGenera.addEventListener( 'click',
       var nomeDelPasseggero = document.getElementById('nome_cognome').value;
       console.log(nomeDelPasseggero);
       // km da percorrere
-      var numeroKM = document.getElementById('km').value;
-      console.log(numeroKM);
+      var numeroKm = document.getElementById('km').value;
+      console.log(numeroKm);
       // eta del passeggero
       var eta = document.getElementById('fascia_eta').value;
       console.log(eta);
+      // prezzo table_biglietto
+      var prezzoPerKm = 0.21;
+      var prezzoStandard = numeroKm * prezzoPerKm;
+      console.log(prezzoStandard);
+      // sconto del 20% per i minorenni e del 40% per gli over 65
+      var scontoUnder = (prezzoStandard * 20 / 100);
+      console.log(scontoUnder);
+      var scontoOver = (prezzoStandard * 40 / 100);
+      console.log(scontoOver);
+      if (eta == "minorenne") {
+          var prezzoFinale = prezzoStandard - scontoUnder;
+          prezzoFinale = prezzoFinale.toFixed(2);
+          console.log(prezzoFinale);
+          document.getElementById('costo_biglietto').innerHTML = prezzoFinale + " €";
+      } else if (eta == "over 65") {
+        var prezzoFinale = prezzoStandard - scontoOver;
+        prezzoFinale = prezzoFinale.toFixed(2);
+        console.log(prezzoFinale);
+        document.getElementById('costo_biglietto').innerHTML =  prezzoFinale + " €";
+
+      } else {
+          document.getElementById('costo_biglietto').innerHTML =  prezzoStandard + " €";
+          console.log(prezzoStandard);
+      }
+
       // inserire dati nel html
       document.getElementById('nome_passeggero').innerHTML = nomeDelPasseggero;
     }
