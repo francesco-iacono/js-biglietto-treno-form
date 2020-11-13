@@ -23,23 +23,32 @@ bottoneGenera.addEventListener( 'click',
       var prezzoPerKm = 0.21;
       var prezzoStandard = numeroKm * prezzoPerKm;
       console.log(prezzoStandard);
-      // sconto del 20% per i minorenni e del 40% per gli over 65
+      // sconto del 20% per i minorenni
       var scontoUnder = (prezzoStandard * 20 / 100);
       console.log(scontoUnder);
+      // sconto del 40% over 65
       var scontoOver = (prezzoStandard * 40 / 100);
       console.log(scontoOver);
+      // messaggio sconto
+      var messaggio = "Biglietto Standard";
+      // applicare lo sconto
       if (eta == "minorenne") {
+          messaggio = "Offerta Giovani";
+          document.getElementById('offerta_passeggero').innerHTML = messaggio;
           var prezzoFinale = prezzoStandard - scontoUnder;
           prezzoFinale = prezzoFinale.toFixed(2);
           console.log(prezzoFinale);
           document.getElementById('costo_biglietto').innerHTML = prezzoFinale + " €";
       } else if (eta == "over 65") {
-        var prezzoFinale = prezzoStandard - scontoOver;
-        prezzoFinale = prezzoFinale.toFixed(2);
-        console.log(prezzoFinale);
-        document.getElementById('costo_biglietto').innerHTML =  prezzoFinale + " €";
+          messaggio = "Offerta Over 65";
+          document.getElementById('offerta_passeggero').innerHTML = messaggio;
+          var prezzoFinale = prezzoStandard - scontoOver;
+          prezzoFinale = prezzoFinale.toFixed(2);
+          console.log(prezzoFinale);
+          document.getElementById('costo_biglietto').innerHTML =  prezzoFinale + " €";
 
       } else {
+          document.getElementById('offerta_passeggero').innerHTML = messaggio;
           document.getElementById('costo_biglietto').innerHTML =  prezzoStandard + " €";
           console.log(prezzoStandard);
       }
