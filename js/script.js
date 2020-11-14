@@ -24,16 +24,16 @@ bottoneGenera.addEventListener( 'click',
       // sconto del 40% over 65
       var scontoOver = (prezzoStandard * 40 / 100);
       // messaggio sconto
-      var messaggio = "Biglietto Standard";
+      var messaggio = "Biglietto <br>Standard";
       // applicare lo sconto
       if (eta == "minorenne") {
-          messaggio = "Offerta Giovani";
+          messaggio = "Offerta <br>Giovani";
           document.getElementById('offerta_passeggero').innerHTML = messaggio;
           var prezzoFinale = prezzoStandard - scontoUnder;
           prezzoFinale = prezzoFinale.toFixed(2);
           document.getElementById('costo_biglietto').innerHTML = prezzoFinale + " €";
       } else if (eta == "over 65") {
-          messaggio = "Offerta Over 65";
+          messaggio = "Offerta <br>Over 65";
           document.getElementById('offerta_passeggero').innerHTML = messaggio;
           var prezzoFinale = prezzoStandard - scontoOver;
           prezzoFinale = prezzoFinale.toFixed(2);
@@ -52,7 +52,7 @@ bottoneGenera.addEventListener( 'click',
 
       // biglietto show
       var bigliettoTreno = document.getElementById('biglietto');
-      bigliettoTreno.className = 'show'
+      bigliettoTreno.className = 'show';
     }
   );
 

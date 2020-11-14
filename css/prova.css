@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  margin: auto;
+  font-family: helvetica;
+}
+.wrapper h1 {
+  text-align: center;
+}
+.container_viaggio {
+  background-color: lightblue;
+}
+.info_viaggio {
+  display: flex;
+  justify-content: center;
+  padding: 20px 80px;
+}
+.dettagli_viaggio {
+  padding: 0 20px;
+}
+.btn_two {
+  text-align: center;
+}
+.hidden {
+  opacity: 0;
+  transition: 0.8s;
+}
+.show {
+  opacity: 1;
+  transition: 0.8s;
+}
+/* riepilogo biglietto treno */
+#biglietto {
+  min-width: 710px;
+  margin-top: 20px;
+  background-color: lightblue;
+}
+.table_biglietto {
+  height: 80%;
+}
+.table_biglietto th, .table_biglietto td {
+  padding: 0 20px;
+  text-align: left;
+}

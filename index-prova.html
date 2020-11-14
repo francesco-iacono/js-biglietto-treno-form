@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/prova.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Calcola il prezzo del biglietto</h1>
+      <!-- container_viaggio -->
+      <div class="container_viaggio">
+        <div class="info_viaggio">
+          <div class="dettagli_viaggio">
+            <h3>Nome e Cognome</h3>
+            <input id="nome_cognome" type="text" name="nome" placeholder="Inserisci Nome e Cognome">
+          </div>
+          <div class="dettagli_viaggio">
+            <h3>Km da percorrere</h3>
+            <input id="km" type="number" name="km" placeholder="Km da percorrere">
+          </div>
+          <div class="dettagli_viaggio">
+            <h3>Fascia d'età</h3>
+            <select name="eta" id="fascia_eta">
+              <option value="minorenne">Minorenne</option>
+              <option value="maggiorenne">Maggiorenne</option>
+              <option value="over 65">Over 65</option>
+            </select>
+          </div>
+        </div>
+        <div class="btn_two">
+          <button id="conferma" type="button" name="button">Genera</button>
+          <button id="annulla" type="button" name="button">Annulla</button>
+        </div>
+      </div>
+      <!-- /container_viaggio -->
+
+      <div id="biglietto" class="">
+        <h2>Riepilogo</h2>
+        <table class="table_biglietto">
+          <tr>
+            <th class="bg">Nome del passeggero</th>
+            <th>Offerta</th>
+            <th>Carrozza</th>
+            <th>Codice CP</th>
+            <th>Costo del biglietto</th>
+          </tr>
+          <tr>
+            <td id="nome_passeggero" class="bg">Francesco Iacono</td>
+            <td id="offerta_passeggero">Offerta</td>
+            <td id="carrozza_passeggero">10</td>
+            <td id="codice_passeggero">908908</td>
+            <td id="costo_biglietto">103,00 €</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <script src="js/script.js" charset="utf-8"></script>
+  </body>
+</html>

@@ -3,55 +3,116 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/style.css">
+    <!-- font  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.css" integrity="sha512-f73UKwzP1Oia45eqHpHwzJtFLpvULbhVpEJfaWczo/ZCV5NWSnK4vLDnjTaMps28ocZ05RbI83k2RlQH92zy7A==" crossorigin="anonymous" />
     <title>Biglitto treno</title>
   </head>
   <body>
-    <div class="wrapper">
-      <h1>Calcola il prezzo del biglietto</h1>
-      <div class="container_viaggio">
-        <div class="info_viaggio">
-          <div class="dettagli_viaggio">
-            <h3>Nome e Cognome</h3>
-            <input id="nome_cognome" type="text" name="nome" placeholder="Inserisci Nome e Cognome">
-          </div>
-          <div class="dettagli_viaggio">
-            <h3>Km da percorrere</h3>
-            <input id="km" type="number" name="km" placeholder="Km da percorrere">
-          </div>
-          <div class="dettagli_viaggio">
-            <h3>Fascia d'età</h3>
-            <select name="eta" id="fascia_eta">
-              <option value="minorenne">Minorenne</option>
-              <option value="maggiorenne">Maggiorenne</option>
-              <option value="over 65">Over 65</option>
+    <header>
+      <div class="wrapper">
+        <!-- header_top -->
+        <div class="header_top">
+          <img src="https://www.italotreno.it/-/media/NewItalotreno-Images/logo.svg" alt="">
+          <div class="menu_header_top">
+            <select class="lingua" name="">
+              <option value="italiano">IT</option>
+              <option value="inglese">EN</option>
             </select>
+            <ul>
+              <li>
+                <a href="#"><i class="far fa-dot-circle"></i>Assistenza</a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-train"></i>Italo in viaggio</a>
+              </li>
+              <li>
+                <a href="#">Italo impresa</a>
+              </li>
+              <li>
+                <a href="#"><i class="far fa-bell"></i>Notifiche</a>
+              </li>
+            </ul>
+            <button class="btn_small btn_red" type="button" name="button">Accedi</button>
+            <div class="hamburger_menu">
+              <a href="#">
+                <i class="fas fa-bars"></i>
+              </a>
+            </div>
           </div>
         </div>
-        <div class="btn_two">
-          <button id="conferma" type="button" name="button">Genera</button>
-          <button id="annulla" type="button" name="button">Annulla</button>
+        <!-- /header_top -->
+        <!-- container_viaggio -->
+        <div class="container_viaggio">
+          <div class="info_viaggio">
+            <div class="dettagli_viaggio">
+              <h4>Nome e Cognome</h4>
+              <input id="nome_cognome" type="text" name="nome" placeholder="Inserisci Nome e Cognome">
+            </div>
+            <div class="dettagli_viaggio">
+              <h4>Km da percorrere</h4>
+              <input id="km" type="number" name="km" placeholder="Km da percorrere">
+            </div>
+            <div class="dettagli_viaggio">
+              <h4>Fascia d'età</h4>
+              <select name="eta" id="fascia_eta">
+                <option value="minorenne">Minorenne</option>
+                <option value="maggiorenne">Maggiorenne</option>
+                <option value="over 65">Over 65</option>
+              </select>
+            </div>
+          </div>
+          <div class="btn_two">
+            <button id="conferma" class="btn_large btn_red" type="button" name="button">Genera</button>
+            <button id="annulla" class="btn_large btn_red" type="button" name="button">Annulla</button>
+          </div>
         </div>
       </div>
-
+      <!-- /container_viaggio -->
+    </header>
+    <main>
+      <div class="wrapper">
+      <!-- Biglietto -->
       <div id="biglietto" class="hidden">
-        <table class="table_biglietto">
-          <tr>
-            <th>Nome del passeggero</th>
-            <th>Offerta</th>
-            <th>Carrozza</th>
-            <th>Codice CP</th>
-            <th>Costo del biglietto</th>
-          </tr>
-          <tr>
-            <td id="nome_passeggero"></td>
-            <td id="offerta_passeggero"></td>
-            <td id="carrozza_passeggero"></td>
-            <td id="codice_passeggero"></td>
-            <td id="costo_biglietto"></td>
-          </tr>
-        </table>
+        <h2>Riepilogo</h2>
+        <div class="riepilogo">
+          <!-- codice biglietto -->
+          <div class="codice-biglietto">
+            <p>
+              <i class="far fa-check-circle"></i>
+              Codice Biglietto
+              <span id="codice_passeggero">908908</span>
+            </p>
+            <p>Il codice biglietto è tutto quello che ti serve per viaggiare</p>
+          </div>
+          <!-- /codice biglietto -->
+          <!-- nome_cognome -->
+          <div class="ticket-container">
+            <div class="right-ticket">
+              <div class="nome-cognome ticket">
+                <h5>Nome del passeggero</h5>
+                <h2 id="nome_passeggero"></h2>
+              </div>
+            </div>
+            <div class="left-ticket">
+              <div class="offerta ticket">
+                <h5>Offerta</h5>
+                <h4 id="offerta_passeggero"></h4>
+              </div>
+              <div class="offerta ticket">
+                <h5>Carrozza</h5>
+                <h4 id="carrozza_passeggero"></h4>
+              </div>
+              <div class="offerta ticket">
+                <h5>Costo del biglietto</h5>
+                <h4 id="costo_biglietto">0,00 €</h4>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+      <!-- /Biglietto -->
+    </main>
     <script src="js/script.js" charset="utf-8"></script>
   </body>
 </html>
